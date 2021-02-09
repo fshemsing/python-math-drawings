@@ -8,6 +8,7 @@ fig = plt.figure()
 ax = a3.Axes3D(fig, xlim3d=[-1,1], ylim3d=[-1,1], zlim3d=[0,1])
 
 def plane_field(x, y, z, h):
+    """ generate the plane field for the standard contact structure on R^3 """
     plane_v1 = np.array([0, 1, 0])
     plane_v2 = np.array([1, 0, y])
     plane_v2 = plane_v2 / np.linalg.norm(plane_v2)
