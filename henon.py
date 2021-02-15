@@ -22,7 +22,7 @@ class Henon():
     def update(self, frame):
         if frame != 0:
             x_tmp = self.x
-            self.x = np.ones(np.shape(x_tmp)) - self.a*x_tmp**2 + self.y
+            self.x = np.ones_like(x_tmp) - self.a*x_tmp**2 + self.y
             self.y = self.b*x_tmp
         # update every Line2D object with data for current iteration
         for (x,y,ln) in zip(self.x, self.y, self.plot):
